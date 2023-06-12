@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext) {
+    return MaterialApp(
+      // debugShowCheckedModeBanner: false,
+      home: FirstPage(),
+    );
+  }
+}
+
+class FirstPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Second App Page'),
+      ),
+      body: Container(
+        width: 100,
+        height: 100,
+        child: Center(
+          child: Text(
+            'Hi GUYSSS',
+            style: TextStyle(
+                color: Colors.white, fontSize: 50, fontFamily: 'Poppins'),
+          ),
+        ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(10),
+              bottomRight: Radius.circular(10)),
+          color: Color.fromARGB(255, 182, 179, 3),
+        ),
+      ),
+    );
+  }
+}
+
